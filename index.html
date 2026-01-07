@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Produtividade — Janeiro</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#111111">
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;margin:16px;background:#0b0b0c;color:#f2f2f2}
+    h1{font-size:18px;margin:0 0 10px}
+    .hint{opacity:.75;font-size:12px;margin-bottom:12px}
+    .wrap{overflow:auto;border:1px solid #2a2a2a;border-radius:12px}
+    table{border-collapse:collapse;min-width:1100px;width:100%}
+    th,td{border:1px solid #222;padding:8px;text-align:center;vertical-align:middle}
+    th.sticky, td.sticky{position:sticky;left:0;background:#101012;z-index:2;text-align:left;min-width:240px}
+    th{background:#101012;position:sticky;top:0;z-index:3}
+    input[type="text"], input[type="number"], input[type="time"]{
+      width:100%;box-sizing:border-box;background:#0f0f11;color:#f2f2f2;border:1px solid #2a2a2a;
+      border-radius:8px;padding:6px;font-size:12px
+    }
+    input[type="checkbox"]{transform:scale(1.2)}
+    .toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+    button{background:#1a1a1d;color:#f2f2f2;border:1px solid #2a2a2a;border-radius:10px;padding:10px 12px}
+    button:active{transform:translateY(1px)}
+    .small{font-size:12px;opacity:.8}
+  </style>
+</head>
+<body>
+  <h1>Produtividade — Janeiro</h1>
+  <div class="hint">Guarda automaticamente no telemóvel. Marca ✅ ou escreve valores (hora, kg, gramas).</div>
+
+  <div class="toolbar">
+    <button id="exportCsv">Exportar CSV</button>
+    <button id="reset">Repor mês (apagar)</button>
+    <span class="small" id="status"></span>
+  </div>
+
+  <div class="wrap">
+    <table id="grid"></table>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
